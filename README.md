@@ -41,6 +41,7 @@ This dockerfile was build based on the temp database (image_database.db) i provi
     ```bash
     python create_database.py
     ```
+- Finally, create docker container with the guideline i have stated above
 
 Or you can add a CMD script in the docker file:
 ```bash

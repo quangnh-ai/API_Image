@@ -21,6 +21,20 @@ In this repo have a temp database with 3 images for testing, if you want to crea
 ## Database
 Database use for this repo is SQLite
 
+## Docker
+- To create image for the repo run
+```bash
+docker build -t api_image:latest .
+```
+- When docker image was created, run the script below to start docker container
+```bash
+docker run --name [name_of_container] -p 8000:8000 -it api_image:latest
+```
+- If you want uploaded images from docker container, you should volume a folder from computer, server to the folder app/images.
+```bash
+docker run --name [name_of_container] -v [path_of_folder_on_local]:/app/images -p 8000:8000 -it api_image:latest
+```
+
 ## API Endpoint
 - Add image: http://[your_local_host]/CREATE
 - Get image: http://[your_local_host]/READ

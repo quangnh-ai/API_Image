@@ -30,7 +30,7 @@ docker build -t api_image:latest .
 ```bash
 docker run --name [name_of_container] -p 8000:8000 -it api_image:latest
 ```
-- If you want uploaded images from docker container, you should volume a folder from computer, server to the folder app/images.
+- If you want to get uploaded images from docker container, you should volume a folder from computer, server to the folder app/images.
 ```bash
 docker run --name [name_of_container] -v [path_of_folder_on_local]:/app/images -p 8000:8000 -it api_image:latest
 ```

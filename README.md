@@ -35,6 +35,18 @@ docker run --name [name_of_container] -p 8000:8000 -it api_image:latest
 docker run --name [name_of_container] -v [path_of_folder_on_local]:/app/images -p 8000:8000 -it api_image:latest
 ```
 
+This dockerfile was build based on the temp database (image_database.db) i provided in the repo. If you want to create your own database:
+- first, you should delete file image_database.db and every images in folder images. 
+- Then, run the script 
+    ```bash
+    python create_database.py
+    ```
+
+Or you can add a CMD script in the docker file:
+```bash
+CMD ["python", "create_database.py"]
+```
+
 ## API Endpoint
 - Add image: http://[your_local_host]/CREATE
 - Get image: http://[your_local_host]/READ

@@ -23,4 +23,5 @@ In this repo have a temp database with 3 images for testing, if you want to crea
 - Get image: http://[your_local_host]/READ
 - Update image: http://[your_local_host]/UPDATE
 - Delete image: http://[your_local_host]/DELETE
+
 For more information about how to test the API, please read the doc in file API_Request.doc
